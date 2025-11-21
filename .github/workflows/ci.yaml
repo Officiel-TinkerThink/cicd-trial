@@ -7,5 +7,7 @@ jobs:
     steps:
       - name: hello
         run: |
-          echo "Hello Wrold"
- 
+          echo "Hello World"
+      - name: this will fail
+        run: exit 1;
+     
