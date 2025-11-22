@@ -20,10 +20,10 @@ jobs:
       env:
         PAYLOAD: ${{ toJSON(github.event) }}
         
-    # - name: filter for magic comment
-    #   id: filter
-    #   if: contains(github.event.comment.body, env.MAGIC_COMMENT)
-    #   run: echo "magic comment detected"
+    - name: filter for magic comment
+      id: filter
+      if: contains(github.event.comment.body, env.MAGIC_COMMENT)
+      run: echo "magic comment detected"
       
     # - name: Parse value from the magic command
     #   if: steps.filter.outcome == 'success'
